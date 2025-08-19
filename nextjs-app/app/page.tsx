@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -9,21 +9,21 @@ export default function Home() {
         <p>This represents the main nx.dev website hosted on Vercel</p>
         
         <div className={styles.ctas}>
-          <a href="/docs" className={styles.primary}>
+          <Link href="/docs" className={styles.primary}>
             Go to Documentation
-          </a>
-          <a href="/docs/getting-started" className={styles.secondary}>
+          </Link>
+          <Link href="/docs/getting-started" className={styles.secondary}>
             Getting Started Guide
-          </a>
+          </Link>
         </div>
         
         <div style={{ marginTop: '2rem' }}>
           <h2>Test Links</h2>
           <ul>
-            <li><a href="/">Home (Next.js)</a></li>
-            <li><a href="/docs">Docs Home (Astro)</a></li>
-            <li><a href="/docs/getting-started">Getting Started (Astro)</a></li>
-            <li><a href="/docs/guides/installation">Installation Guide (Astro)</a></li>
+            <li><Link href="/">Home (Next.js)</Link></li>
+            <li><Link href="/docs">Docs Home (Astro)</Link></li>
+            <li><Link href="/docs/getting-started">Getting Started (Astro)</Link></li>
+            <li><Link href="/docs/guides/installation">Installation Guide (Astro)</Link></li>
           </ul>
         </div>
       </main>
