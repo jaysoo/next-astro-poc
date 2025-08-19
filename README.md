@@ -57,7 +57,7 @@ The key configuration is in `nextjs-app/next.config.ts`:
 
 ```typescript
 async rewrites() {
-  const astroDocsUrl = process.env.ASTRO_DOCS_URL || 'http://localhost:4321';
+  const astroDocsUrl = process.env.NEXT_PUBLIC_ASTRO_URL || 'http://localhost:8081';
   
   return [
     {
@@ -77,6 +77,10 @@ This configuration:
 - Proxies them to the Astro application
 - Uses environment variables for different environments
 
+## 🚀 Deployment Instructions
+
+**See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for detailed step-by-step deployment instructions to Vercel and Netlify.**
+
 ## Deployment Setup
 
 ### 1. Deploy Astro to Netlify
@@ -93,19 +97,19 @@ This configuration:
 1. Create a new Vercel project
 2. Connect the `nextjs-app` directory
 3. Add environment variable:
-   - `ASTRO_DOCS_URL`: Your Netlify URL from step 1
+   - `NEXT_PUBLIC_ASTRO_URL`: Your Netlify URL from step 1
 4. Deploy
 
 ### 3. Configure for Multiple Environments
 
 For production (`nx.dev`):
 ```
-ASTRO_DOCS_URL=https://nx-docs-prod.netlify.app
+NEXT_PUBLIC_ASTRO_URL=https://nx-docs-prod.netlify.app
 ```
 
 For canary (`canary.nx.dev`):
 ```
-ASTRO_DOCS_URL=https://nx-docs-canary.netlify.app
+NEXT_PUBLIC_ASTRO_URL=https://nx-docs-canary.netlify.app
 ```
 
 ## Environment Variables
@@ -116,8 +120,8 @@ Create environment variables in Vercel dashboard:
 
 | Variable | Value | Environment |
 |----------|-------|-------------|
-| `ASTRO_DOCS_URL` | `https://nx-docs-prod.netlify.app` | Production |
-| `ASTRO_DOCS_URL` | `https://nx-docs-canary.netlify.app` | Preview |
+| `NEXT_PUBLIC_ASTRO_URL` | `https://nx-docs-prod.netlify.app` | Production |
+| `NEXT_PUBLIC_ASTRO_URL` | `https://nx-docs-canary.netlify.app` | Preview |
 
 ### Local Development
 

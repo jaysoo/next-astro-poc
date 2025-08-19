@@ -2,8 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   async rewrites() {
-    const isProduction = process.env.NODE_ENV === 'production';
-    const astroDocsUrl = process.env.ASTRO_DOCS_URL || 'http://localhost:4321';
+    // Use NEXT_PUBLIC_ASTRO_URL environment variable
+    const astroDocsUrl = process.env.NEXT_PUBLIC_ASTRO_URL || 'http://localhost:8081';
     
     console.log(`Configuring rewrites to Astro docs at: ${astroDocsUrl}`);
     
