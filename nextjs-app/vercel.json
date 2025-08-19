@@ -1,0 +1,15 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "env": {
+    "ASTRO_DOCS_URL": "@astro_docs_url"
+  },
+  "build": {
+    "env": {
+      "ASTRO_DOCS_URL": "@astro_docs_url"
+    }
+  }
+}

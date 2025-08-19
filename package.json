@@ -1,0 +1,17 @@
+{
+  "name": "next-astro-poc",
+  "version": "1.0.0",
+  "description": "POC for serving Astro docs through Next.js rewrites",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:astro\" \"npm run dev:next\"",
+    "dev:astro": "cd astro-docs && npm run dev",
+    "dev:next": "cd nextjs-app && npm run dev",
+    "install:all": "npm run install:astro && npm run install:next",
+    "install:astro": "cd astro-docs && npm install",
+    "install:next": "cd nextjs-app && npm install",
+    "test": "./test-setup.sh"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
