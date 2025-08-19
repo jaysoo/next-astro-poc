@@ -42,7 +42,7 @@ netlify deploy --prod
 4. Configure build settings:
    - **Base directory**: `astro-docs`
    - **Build command**: `npm run build`
-   - **Publish directory**: `astro-docs/dist`
+   - **Publish directory**: `dist` (NOT `astro-docs/dist` - it's relative to base directory!)
    - **Node version**: 18 (set in Environment variables)
 5. Click "Deploy site"
 6. Note your site URL (e.g., `https://amazing-docs-123.netlify.app`)
