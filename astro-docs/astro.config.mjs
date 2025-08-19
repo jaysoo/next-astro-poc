@@ -2,4 +2,8 @@
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  build: {
+    format: 'file' // Build pages as files instead of directories
+  }
+});
